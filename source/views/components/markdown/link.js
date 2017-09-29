@@ -13,14 +13,13 @@ export const LinkText = glamorous.text({
   color: c.infoBlue,
 })
 
-export class Link extends React.PureComponent {
-  props: {
-    href: string,
-    title?: string,
-    children: Array<string>,
-  }
-
-  options = [
+type Props = {
+  href: string,
+  title?: string,
+  children: Array<string>,
+}
+export class Link extends React.PureComponent<void, Props, void> {
+  options: Array<[string, (Props) => any]> = [
     ['Open', ({href}: {href: string}) => openUrl(href)],
     [
       'Copy',

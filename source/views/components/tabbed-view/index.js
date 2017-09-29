@@ -1,10 +1,8 @@
 // @flow
 
 import {Platform} from 'react-native'
-import {
-  TabNavigator as TabNav,
-  NavigationScreenRouteConfig,
-} from 'react-navigation'
+import {TabNavigator as TabNav} from 'react-navigation'
+import type {NavigationScreenRouteConfig} from 'react-navigation/src/TypeDefinition'
 import * as c from '../colors'
 
 type ComponentType = (

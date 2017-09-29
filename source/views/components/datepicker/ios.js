@@ -202,7 +202,13 @@ class DatePickerModal extends React.PureComponent<void, ModalProps, void> {
   }
 }
 
-const Button = ({style, textStyle, onPress, text}) =>
+type ButtonProps = {
+  style?: StyleSheetRules,
+  textStyle?: StyleSheetRules,
+  onPress: () => any,
+  text: string,
+}
+const Button = ({style, textStyle, onPress, text}: ButtonProps) =>
   <TouchableHighlight
     underlayColor="transparent"
     onPress={onPress}
